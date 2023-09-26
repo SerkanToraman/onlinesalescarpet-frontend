@@ -1,0 +1,353 @@
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#appContainer {
+  background-color: white;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.homePage .navBar {
+  background-color: #f4f2eb;
+  padding: 1rem 5rem 1rem 5rem;
+}
+.homePage .navBar #nav {
+  display: flex;
+  flex-direction: column;
+}
+.homePage .navBar #nav .sideBarMain {
+  width: 15rem;
+  background-color: white;
+  height: 100vh;
+  position: fixed; /* Fixed position */
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it on the left */
+  z-index: 1000;
+  padding: 3rem 1rem 3rem 1rem;
+  box-shadow: 5px -0.5px 5px #f4f2eb;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav {
+  height: 100%;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem {
+  margin-bottom: 2rem;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 svg {
+  width: 2rem;
+  height: 2rem;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  transition: color 0.3s ease;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn {
+  display: inline-block;
+  background: transparent;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: rgba(223, 190, 106, 0.7);
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem 0 1rem;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223, 190, 106, 0.8), rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(223, 190, 106, 0.3);
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn:hover {
+  color: #fff;
+  border: 1px solid rgba(223, 190, 106, 0);
+  background-position: 99% 50%;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  color: inherit;
+  font-size: inherit; /* Inherit font size */
+  text-align: inherit; /* Inherit text alignment */
+  padding: 0;
+  box-shadow: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul {
+  display: flex;
+  flex-direction: column;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.2rem 0 0.2rem 0;
+}
+.homePage .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.homePage .navBar #nav .headerFirstRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+.homePage .navBar #nav .headerFirstRow .headerContainer {
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.homePage .navBar #nav .headerFirstRow .headerContainer #header {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+.homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+  width: 2rem;
+  height: 2rem;
+}
+.homePage .navBar #nav #a {
+  display: flex;
+  align-content: center;
+  font-size: 1.5rem;
+  height: 4rem;
+  position: relative;
+  padding: 0.4em 0;
+}
+.homePage .navBar #nav #a::after {
+  content: "";
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #fe4902;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+  transform: scale(0);
+  transform-origin: center;
+}
+.homePage .navBar #nav #a:hover::after,
+.homePage .navBar #nav #a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  transform: scale(1);
+}
+.homePage .navBar #nav .nav-item button[data-unclickable=true] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.homePage .navBar #nav .nav-item .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: -1rem;
+  margin-top: 2.5rem;
+  width: 20rem;
+  padding: 1rem;
+  opacity: 0; /* Start with opacity at 0 */
+  visibility: hidden; /* Hide content initially */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition opacity and visibility */
+}
+.homePage .navBar #nav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.homePage .navBar #nav .nav-item:hover .dropdown-menu {
+  opacity: 1; /* Fade in by changing opacity to 1 */
+  visibility: visible; /* Make content visible */
+}
+@media (max-width: 991px) {
+  .homePage .navBar {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+  .homePage .navBar #nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .homePage .navBar #nav .headerFirstRow {
+    padding-bottom: 0.5rem;
+    justify-content: center;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer #header {
+    width: auto;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,113 @@
+@import "../variables.scss";
+
+.navBar {
+  background-color: $backgroundColorDarker;
+  padding: 1rem 5rem 1rem 5rem;
+  #nav {
+    display: flex;
+    flex-direction: column;
+    @import "../components/sideBar.scss";
+    .headerFirstRow {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 2rem;
+
+      .headerContainer {
+        width: 66%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        #header {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          font-size: 4rem;
+          letter-spacing: 0.2rem;
+        }
+
+        #headerIconContainer {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 2rem;
+          svg {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+    #a {
+      display: flex;
+      align-content: center;
+      font-size: 1.5rem;
+      height: 4rem;
+      position: relative;
+      padding: 0.4em 0;
+    }
+    #a::after {
+      content: "";
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #fe4902;
+      opacity: 0;
+      transition: opacity 500ms, transform 500ms;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    #a:hover::after,
+    #a:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+      transform: scale(1);
+    }
+    @import './dropDown.scss'
+  }
+}
+
+@media (max-width: 991px) {
+  .navBar {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+
+    #nav {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+
+      .headerFirstRow {
+        padding-bottom: 0.5rem;
+        justify-content: center;
+
+        .headerContainer {
+          width: 100%;
+          flex-direction: column;
+
+          #header {
+            width: auto;
+            font-size: 2.5rem;
+            letter-spacing: 0.15rem;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+          }
+
+          #headerIconContainer {
+            padding-top: 1rem;
+            justify-content: center;
+
+            svg {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+        }
+      }
+  
+    }
+  }
+}
