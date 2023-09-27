@@ -6,6 +6,9 @@ import $ from "jquery";
 import DropDown from "./DropDown";
 import SideBar from "./SideBar";
 //Context
+
+//png
+import logo from '../assets/logo.png'
 //Store
 //Pages
 //CSS
@@ -52,9 +55,9 @@ function NavBar() {
         {isSideBarVisible && <SideBar />}
         <div className="headerFirstRow">
           <div className="headerContainer">
-            <a className="navbar-brand" id="header" href="#">
-              Polaris Halı
-            </a>
+            <div className="navbar-brand" id="header" href="#">
+             <img src={logo}></img>
+            </div>
             <ul className="navbar-nav" id="headerIconContainer">
               <li className="collapse navbar-collapse">
                 <a href="#">

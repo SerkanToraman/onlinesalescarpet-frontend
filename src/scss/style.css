@@ -137,7 +137,7 @@ table {
 
 .homePage .navBar {
   background-color: #f4f2eb;
-  padding: 1rem 5rem 1rem 5rem;
+  padding: 1rem 3rem 1rem 3rem;
 }
 .homePage .navBar #nav {
   display: flex;
@@ -242,7 +242,7 @@ table {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 .homePage .navBar #nav .headerFirstRow .headerContainer {
   width: 66%;
@@ -254,8 +254,9 @@ table {
   width: 50%;
   display: flex;
   justify-content: center;
-  font-size: 4rem;
-  letter-spacing: 0.2rem;
+}
+.homePage .navBar #nav .headerFirstRow .headerContainer #header img {
+  width: 40rem;
 }
 .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
   display: flex;
@@ -271,14 +272,14 @@ table {
   display: flex;
   align-content: center;
   font-size: 1.5rem;
-  height: 4rem;
+  height: 3rem;
   position: relative;
   padding: 0.4em 0;
 }
 .homePage .navBar #nav #a::after {
   content: "";
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.2rem;
   left: 0;
   width: 100%;
   height: 0.1em;
@@ -317,9 +318,18 @@ table {
   opacity: 1; /* Fade in by changing opacity to 1 */
   visibility: visible; /* Make content visible */
 }
+@media (max-width: 1280px) {
+  .homePage .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 30rem;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 @media (max-width: 991px) {
   .homePage .navBar {
-    padding: 1.5rem 1rem 1.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
   .homePage .navBar #nav {
     flex-direction: row;
@@ -336,11 +346,12 @@ table {
   }
   .homePage .navBar #nav .headerFirstRow .headerContainer #header {
     width: auto;
-    font-size: 2.5rem;
-    letter-spacing: 0.15rem;
     margin: 0;
     padding: 0;
     flex-grow: 1;
+  }
+  .homePage .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 17rem;
   }
   .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
     padding-top: 1rem;
@@ -349,5 +360,211 @@ table {
   .homePage .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
     width: 1.2rem;
     height: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .homePage .navBar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+.homePage #myCarousel {
+  height: 100%;
+}
+.homePage #myCarousel .carousel-inner .imgContainer {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+}
+.homePage #myCarousel .carousel-inner .imgContainer .imgIs {
+  object-fit: cover;
+  width: 100%;
+  object-position: 50% 25%;
+}
+.homePage #myCarousel .carousel-inner .imgContainer .imgKil {
+  object-fit: cover;
+  width: 100%;
+  object-position: 50% 5%;
+}
+.homePage #myCarousel .carousel-inner .imgContainer .imgAsp {
+  object-fit: cover;
+  width: 100%;
+  object-position: 50% 95%;
+}
+.homePage #myCarousel .carousel-inner .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  left: 15%;
+  align-items: center;
+  gap: 0.5rem;
+}
+.homePage #myCarousel .carousel-inner .carousel-caption h5 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 3px black;
+}
+.homePage #myCarousel .carousel-inner .carousel-caption button {
+  display: inline-block;
+  background: transparent;
+  font-style: normal;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 3px black;
+  border-radius: 0;
+  width: 10rem;
+  padding: 1rem 0 1rem;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223, 190, 106, 0.8), rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(223, 190, 106, 0.3);
+}
+.homePage #myCarousel .carousel-inner .carousel-caption button:hover {
+  color: #fff;
+  text-shadow: none;
+  border: 1px solid rgba(223, 190, 106, 0);
+  background-position: 99% 50%;
+}
+.homePage #myCarousel .carousel-indicators [data-bs-target] {
+  width: 4rem;
+  height: 0.3rem;
+}
+.homePage #myCarousel .carousel-control-prev {
+  width: 10%;
+}
+.homePage #myCarousel .carousel-control-prev .carousel-control-prev-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.homePage #myCarousel .carousel-control-next {
+  width: 10%;
+}
+.homePage #myCarousel .carousel-control-next .carousel-control-next-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.homePage #myCarousel .animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.homePage #myCarousel .fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@media (max-width: 991px) {
+  .homePage #myCarousel .carousel-inner .imgContainer {
+    height: 25rem;
+  }
+}
+@media (max-width: 600px) {
+  .homePage #myCarousel .carousel-inner .imgContainer {
+    height: 20rem;
+  }
+  .homePage #myCarousel .carousel-indicators [data-bs-target] {
+    width: 3rem;
+    height: 0.2rem;
+  }
+  .homePage #myCarousel .carousel-control-prev .carousel-control-prev-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .homePage #myCarousel .carousel-control-next .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 415px) {
+  .homePage #myCarousel {
+    height: 13rem;
+  }
+  .homePage #myCarousel .carousel-inner .imgContainer {
+    height: 13rem;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-caption {
+    position: relative;
+    left: 0%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-caption h5 {
+    font-size: 2rem;
+    color: black;
+    text-shadow: none;
+    margin-top: 1rem;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-caption button {
+    font-size: 1rem;
+    color: black;
+    text-shadow: none;
+    width: 6rem;
+    padding: 0.5rem 0 0.5rem;
+    text-decoration: none;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-indicators [data-bs-target] {
+    width: 2rem;
+    height: 0.1rem;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-control-prev .carousel-control-prev-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .homePage #myCarousel .carousel-inner .carousel-control-next .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  .homePage .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
   }
 }/*# sourceMappingURL=style.css.map */
