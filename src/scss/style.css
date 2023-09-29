@@ -647,6 +647,9 @@ table {
     height: 23rem;
     gap: 0.3rem;
   }
+  .homePage .collectionsMainContainer .collectionsCards .collectionCard .collectionCardImg img {
+    bottom: 28%;
+  }
   .homePage .collectionsMainContainer .collectionsCards .collectionCard h3 {
     margin-top: 0.5rem;
     font-size: 2rem;
