@@ -660,4 +660,306 @@ table {
     background-size: 100% 0.05em;
     padding: 0;
   }
+}
+
+.carpetMainContainer .navBar {
+  background-color: #f4f2eb;
+  padding: 1rem 3rem 1rem 3rem;
+}
+.carpetMainContainer .navBar #nav {
+  display: flex;
+  flex-direction: column;
+}
+.carpetMainContainer .navBar #nav .sideBarMain {
+  width: 15rem;
+  background-color: white;
+  height: 100vh;
+  position: fixed; /* Fixed position */
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it on the left */
+  z-index: 1000;
+  padding: 3rem 1rem 3rem 1rem;
+  box-shadow: 5px -0.5px 5px #f4f2eb;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav {
+  height: 100%;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem {
+  margin-bottom: 2rem;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 svg {
+  width: 2rem;
+  height: 2rem;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  transition: color 0.3s ease;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn {
+  display: inline-block;
+  background: transparent;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: rgba(223, 190, 106, 0.7);
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem 0 1rem;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223, 190, 106, 0.8), rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(223, 190, 106, 0.3);
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn:hover {
+  color: #fff;
+  border: 1px solid rgba(223, 190, 106, 0);
+  background-position: 99% 50%;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  color: inherit;
+  font-size: inherit; /* Inherit font size */
+  text-align: inherit; /* Inherit text alignment */
+  padding: 0;
+  box-shadow: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul {
+  display: flex;
+  flex-direction: column;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.2rem 0 0.2rem 0;
+}
+.carpetMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.carpetMainContainer .navBar #nav .headerFirstRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
+}
+.carpetMainContainer .navBar #nav .headerFirstRow .headerContainer {
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #header {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+  width: 40rem;
+}
+.carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+  width: 2rem;
+  height: 2rem;
+}
+.carpetMainContainer .navBar #nav #a {
+  display: flex;
+  align-content: center;
+  font-size: 1.5rem;
+  height: 3rem;
+  position: relative;
+  padding: 0.4em 0;
+}
+.carpetMainContainer .navBar #nav #a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #fe4902;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+  transform: scale(0);
+  transform-origin: center;
+}
+.carpetMainContainer .navBar #nav #a:hover::after,
+.carpetMainContainer .navBar #nav #a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  transform: scale(1);
+}
+.carpetMainContainer .navBar #nav .nav-item button[data-unclickable=true] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.carpetMainContainer .navBar #nav .nav-item .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: -1rem;
+  margin-top: 2.5rem;
+  width: 20rem;
+  padding: 1rem;
+  opacity: 0; /* Start with opacity at 0 */
+  visibility: hidden; /* Hide content initially */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition opacity and visibility */
+}
+.carpetMainContainer .navBar #nav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.carpetMainContainer .navBar #nav .nav-item:hover .dropdown-menu {
+  opacity: 1; /* Fade in by changing opacity to 1 */
+  visibility: visible; /* Make content visible */
+}
+@media (max-width: 1280px) {
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 30rem;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .carpetMainContainer .navBar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .carpetMainContainer .navBar #nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow {
+    padding-bottom: 0.5rem;
+    justify-content: center;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #header {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 17rem;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  .carpetMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .carpetMainContainer .navBar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+.carpetMainContainer .carpetPageMainContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.carpetMainContainer .carpetPageMainContainer h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 20rem;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard .carpetCardImg {
+  overflow: hidden;
+  width: 100%;
+  height: 25rem;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard .carpetCardImg img {
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard h3 {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard p {
+  font-size: 1.2rem;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard button {
+  color: black;
+  font-size: 1.1rem;
+  padding-bottom: 0.2rem;
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 100% 0.1em;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s linear;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:hover h3 {
+  opacity: 0.8;
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:hover img {
+  transform: scale(1.1);
+}
+.carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:hover button, .carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:focus button, .carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:active button {
+  background-size: 0% 0%;
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */

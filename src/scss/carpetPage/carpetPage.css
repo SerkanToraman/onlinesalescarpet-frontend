@@ -1,0 +1,69 @@
+.carpetPageMainContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.carpetPageMainContainer h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+}
+.carpetPageMainContainer .collectionsCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 20rem;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard .carpetCardImg {
+  overflow: hidden;
+  width: 100%;
+  height: 25rem;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard .carpetCardImg img {
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard h3 {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard p {
+  font-size: 1.2rem;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard button {
+  color: black;
+  font-size: 1.1rem;
+  padding-bottom: 0.2rem;
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 100% 0.1em;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s linear;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard:hover h3 {
+  opacity: 0.8;
+}
+.carpetPageMainContainer .collectionsCards .carpetCard:hover img {
+  transform: scale(1.1);
+}
+.carpetPageMainContainer .collectionsCards .carpetCard:hover button, .carpetPageMainContainer .collectionsCards .carpetCard:focus button, .carpetPageMainContainer .collectionsCards .carpetCard:active button {
+  background-size: 0% 0%;
+  opacity: 0.8;
+}/*# sourceMappingURL=carpetPage.css.map */

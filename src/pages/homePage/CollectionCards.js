@@ -1,5 +1,6 @@
 //Outsource JS library
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 //Internal JS
 //Components
 //Context
@@ -8,8 +9,22 @@ import React from "react";
 //CSS
 
 function CollectionCards({ collectionItem }) {
+  const navigate = useNavigate();
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    setUrl(
+      collectionItem.name.replace(/ /g, "").replace(/ı/g, "i").toLowerCase()
+    );
+  }, []);
+
   return (
-    <div className="collectionCard">
+    <div
+      className="collectionCard"
+      onClick={() => {
+        navigate("/koleksiyonlar/" + url);
+        // window.location.reload();
+      }}
+    >
       <div className="collectionCardImg">
         <img src={collectionItem.img} alt={collectionItem.img} />
       </div>

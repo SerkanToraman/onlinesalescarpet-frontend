@@ -8,15 +8,15 @@ import aspendos from '../../assets/collections/aspendosCollection.jpg';
 export const CollectionsData=[
   {
     name:"Jel Halı",
-    img: jel
+    img: jel,
   },
   {
     name:"Kilim",
-    img: kilim
+    img: kilim,
   },
   {
     name:"İskandinav Halı",
-    img: iskandinav
+    img: iskandinav,
   },
   {
     name:"Aspendos Halı",
