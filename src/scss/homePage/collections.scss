@@ -45,8 +45,9 @@
       }
 
       button {
+        color: black;
         font-size: 1.5rem;
-        height: 2rem;
+        height: 3rem;
         background-image: linear-gradient(#d99a5a, #d99a5a);
         background-size: 100% 0.12em;
         background-position-y: 100%;
@@ -95,7 +96,7 @@
         }
         button {
           font-size: 1.5rem;
-          height: 2rem;
+          padding-bottom: 0.3rem;
         }
       }
     }
