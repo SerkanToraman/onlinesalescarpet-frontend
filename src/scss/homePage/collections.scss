@@ -15,8 +15,8 @@
     .collectionCard {
       display: flex;
       flex-direction: column;
-      width: 25rem;
-      height: 30rem;
+      width: 20rem;
+      height: 25rem;
       gap: 0.5rem;
       margin-bottom: 4rem;
       position: relative;
@@ -25,13 +25,13 @@
 
       .collectionCardImg {
         width: 95%;
-        height: 25rem;
+        height: 20rem;
         overflow: hidden;
         img {
           object-fit: cover;
           position: relative;
           width: 100%;
-          bottom: 25%;
+          bottom: 40%;
           transition: transform 0.3s ease;
         }
       }
@@ -49,7 +49,7 @@
         font-size: 1.5rem;
         height: 3rem;
         background-image: linear-gradient(#d99a5a, #d99a5a);
-        background-size: 100% 0.12em;
+        background-size: 100% 0.1em;
         background-position-y: 100%;
         background-repeat: no-repeat;
         transition: background-size 0.2s linear;
@@ -95,8 +95,10 @@
           font-size: 2rem;
         }
         button {
-          font-size: 1.5rem;
-          padding-bottom: 0.3rem;
+          font-size: 1.3rem;
+          height: 1.8rem;
+          background-size: 100% 0.05em;
+          padding: 0;
         }
       }
     }
