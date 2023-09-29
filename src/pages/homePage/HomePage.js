@@ -4,6 +4,7 @@ import React from "react";
 //Components
 import NavBar from "../../components/NavBar";
 import Carousel from "./Carousel";
+import Collections from "./Collections";
 //Context
 //Store
 //Pages
@@ -14,6 +15,7 @@ function HomePage() {
     <div className="homePage">
       <NavBar />
       <Carousel />
+      <Collections/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
-import kilim from "../../assets/kilimCarousel.jpg";
-import iskandinav from "../../assets/iskandinavCarousel2.jpg";
-import aspendons from "../../assets/aspendosCarousel2.jpg";
+import kilim from "../../assets/carousel/kilimCarousel.jpg";
+import iskandinav from "../../assets/carousel/iskandinavCarousel2.jpg";
+import aspendons from "../../assets/carousel/aspendosCarousel2.jpg";
 // src="https://picsum.photos/1200/400?grayscale"
 
 function Carousel() {
@@ -42,7 +42,7 @@ function Carousel() {
           <div class="carousel-caption">
             <h5 className="animated fadeInUp ">İskandinav</h5>
 
-            <button className="animated fadeInUp ">Satin al</button>
+            <button className="animated fadeInUp ">Satın Al</button>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="50000">
@@ -51,7 +51,7 @@ function Carousel() {
           </div>
           <div class="carousel-caption">
             <h5 className="animated fadeInUp ">Kilim</h5>
-            <button className="animated fadeInUp ">Satin al</button>
+            <button className="animated fadeInUp ">Satın Al</button>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="50000">
@@ -60,7 +60,7 @@ function Carousel() {
           </div>
           <div class="carousel-caption">
             <h5 className="animated fadeInUp"> Aspendos </h5>
-            <button className="animated fadeInUp ">Satin al</button>
+            <button className="animated fadeInUp ">Satın Al</button>
           </div>
         </div>
       </div>
