@@ -13,9 +13,10 @@ function SideBarAccordion() {
             aria-expanded="false"
             aria-controls="collapseOne"
           >
-            Alisveriş
+            Koleksiyonlar
           </button>
         </h2>
+
         <div
           id="collapseOne"
           class="accordion-collapse collapse"

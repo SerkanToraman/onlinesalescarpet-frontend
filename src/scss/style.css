@@ -962,4 +962,366 @@ table {
 .carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:hover button, .carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:focus button, .carpetMainContainer .carpetPageMainContainer .collectionsCards .carpetCard:active button {
   background-size: 0% 0%;
   opacity: 0.8;
+}
+
+.productPageMainContainer .navBar {
+  background-color: #f4f2eb;
+  padding: 1rem 3rem 1rem 3rem;
+}
+.productPageMainContainer .navBar #nav {
+  display: flex;
+  flex-direction: column;
+}
+.productPageMainContainer .navBar #nav .sideBarMain {
+  width: 15rem;
+  background-color: white;
+  height: 100vh;
+  position: fixed; /* Fixed position */
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it on the left */
+  z-index: 1000;
+  padding: 3rem 1rem 3rem 1rem;
+  box-shadow: 5px -0.5px 5px #f4f2eb;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav {
+  height: 100%;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem {
+  margin-bottom: 2rem;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemh1 svg {
+  width: 2rem;
+  height: 2rem;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  transition: color 0.3s ease;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn {
+  display: inline-block;
+  background: transparent;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: rgba(223, 190, 106, 0.7);
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem 0 1rem;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223, 190, 106, 0.8), rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(223, 190, 106, 0.3);
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem .sideBarSubItemBtn:hover {
+  color: #fff;
+  border: 1px solid rgba(223, 190, 106, 0);
+  background-position: 99% 50%;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  color: inherit;
+  font-size: inherit; /* Inherit font size */
+  text-align: inherit; /* Inherit text alignment */
+  padding: 0;
+  box-shadow: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem #accordionExample .accordion-header .accordion-button:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul {
+  display: flex;
+  flex-direction: column;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.2rem 0 0.2rem 0;
+}
+.productPageMainContainer .navBar #nav .sideBarMain #sideBarNav .sideBarItem ul .accordion-subItem:hover {
+  color: rgba(223, 190, 106, 0.7);
+}
+.productPageMainContainer .navBar #nav .headerFirstRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.5rem;
+}
+.productPageMainContainer .navBar #nav .headerFirstRow .headerContainer {
+  width: 66%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #header {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+  width: 40rem;
+}
+.productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+  width: 2rem;
+  height: 2rem;
+}
+.productPageMainContainer .navBar #nav #a {
+  display: flex;
+  align-content: center;
+  font-size: 1.5rem;
+  height: 3rem;
+  position: relative;
+  padding: 0.4em 0;
+}
+.productPageMainContainer .navBar #nav #a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #fe4902;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+  transform: scale(0);
+  transform-origin: center;
+}
+.productPageMainContainer .navBar #nav #a:hover::after,
+.productPageMainContainer .navBar #nav #a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  transform: scale(1);
+}
+.productPageMainContainer .navBar #nav .nav-item button[data-unclickable=true] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.productPageMainContainer .navBar #nav .nav-item .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: -1rem;
+  margin-top: 2.5rem;
+  width: 20rem;
+  padding: 1rem;
+  opacity: 0; /* Start with opacity at 0 */
+  visibility: hidden; /* Hide content initially */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition opacity and visibility */
+}
+.productPageMainContainer .navBar #nav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.productPageMainContainer .navBar #nav .nav-item:hover .dropdown-menu {
+  opacity: 1; /* Fade in by changing opacity to 1 */
+  visibility: visible; /* Make content visible */
+}
+@media (max-width: 1280px) {
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 30rem;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .productPageMainContainer .navBar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .productPageMainContainer .navBar #nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow {
+    padding-bottom: 0.5rem;
+    justify-content: center;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #header {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #header img {
+    width: 17rem;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  .productPageMainContainer .navBar #nav .headerFirstRow .headerContainer #headerIconContainer svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .productPageMainContainer .navBar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+.productPageMainContainer .productCardContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+.productPageMainContainer .productCardContainer .mainHeader {
+  font-size: 2.5rem;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer {
+  width: 40rem;
+  margin: auto;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 3rem;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 {
+  height: 2rem;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 {
+  height: 2rem;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer {
+    width: 20rem;
+    margin: auto;
+  }
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 2rem;
+  }
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 {
+    height: 1.5rem;
+  }
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 {
+    height: 1.5rem;
+  }
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.productPageMainContainer .productCardContainer .bottomSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productCardImg {
+  min-width: 30rem;
+  overflow: hidden;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productCardImg img {
+  object-fit: cover;
+  width: 100%;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 3rem 0 4rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer h3 {
+  font-size: 1rem;
+  padding-bottom: 0.4rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer #formElements {
+  margin-bottom: 1rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer #button {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 10rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer #button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.productPageMainContainer .productCardContainer .bottomSection .productFormContainer #button p {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .productPageMainContainer .productCardContainer .bottomSection .productFormContainer {
+    padding: 0 0.2rem 0 0.2rem;
+    margin: auto;
+  }
+}
+@media (max-width: 991px) {
+  .productPageMainContainer .productCardContainer {
+    width: 90%;
+  }
+  .productPageMainContainer .productCardContainer .bottomSection {
+    flex-direction: column;
+  }
+  .productPageMainContainer .productCardContainer .bottomSection .productCardImg {
+    min-width: 25rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .productPageMainContainer .productCardContainer .bottomSection .productCardImg {
+    min-width: 20rem;
+  }
 }/*# sourceMappingURL=style.css.map */

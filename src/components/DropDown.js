@@ -10,7 +10,7 @@ function DropDown() {
         id="a"
         data-unclickable="true"
       >
-        Alışveriş
+        Koleksiyonlar
         {/* <span class="visually-hidden">Toggle Dropdown</span> */}
       </button>
       <ul class="dropdown-menu">

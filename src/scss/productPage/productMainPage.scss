@@ -1,0 +1,6 @@
+@import "../variables.scss";
+
+.productPageMainContainer {
+  @import "../components/navBar.scss";
+  @import "./productCard.scss";
+}

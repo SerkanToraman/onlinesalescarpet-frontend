@@ -1,0 +1,54 @@
+@import "../variables.scss";
+
+.productCardContainer {
+  width: 80%;
+  margin: 0 auto;
+  .mainHeader {
+    font-size: 2.5rem;
+    padding: 1rem 0 1rem 0;
+    text-align: center
+  }
+  @import "./productStockStatusGrid.scss";
+  .bottomSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    .productCardImg {
+      min-width: 30rem;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    @import "./productForm.scss";
+  }
+}
+
+@media (max-width: 991px) {
+  .productCardContainer {
+    width: 90%;
+    .bottomSection {
+      flex-direction: column;
+      .productCardImg {
+        min-width: 25rem;
+        margin-bottom: 1rem;
+        img {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .productCardContainer {
+    .bottomSection {
+      .productCardImg {
+        min-width: 20rem;
+        img {
+        }
+      }
+    }
+  }
+}

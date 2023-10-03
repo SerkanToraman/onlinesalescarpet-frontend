@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.productFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 3rem 0 4rem;
+
+  h3 {
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+  }
+  #formElements {
+    margin-bottom: 1rem;
+  }
+  #button {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10rem;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .productFormContainer {
+    padding: 0 0.2rem 0 0.2rem;
+    margin: auto;
+    h3 {
+    }
+    #formElements {
+    }
+    #button {
+      svg {
+      }
+      p {
+      }
+    }
+  }
+}

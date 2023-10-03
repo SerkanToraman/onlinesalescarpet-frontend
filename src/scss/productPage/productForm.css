@@ -1,0 +1,34 @@
+.productFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 3rem 0 4rem;
+}
+.productFormContainer h3 {
+  font-size: 1rem;
+  padding-bottom: 0.4rem;
+}
+.productFormContainer #formElements {
+  margin-bottom: 1rem;
+}
+.productFormContainer #button {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 10rem;
+}
+.productFormContainer #button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.productFormContainer #button p {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .productFormContainer {
+    padding: 0 0.2rem 0 0.2rem;
+    margin: auto;
+  }
+}/*# sourceMappingURL=productForm.css.map */

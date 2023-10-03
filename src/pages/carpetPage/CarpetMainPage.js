@@ -7,7 +7,6 @@ import NavBar from "../../components/NavBar";
 //Context
 //Store
 //Pages
-import CarpetJelPage from "./CarpetJelPage";
 //CSS
 
 function CarpetMainPage() {
