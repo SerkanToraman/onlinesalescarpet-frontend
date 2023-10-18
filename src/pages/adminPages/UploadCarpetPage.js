@@ -13,8 +13,19 @@ import axios from "axios";
 function UploadCarpetPage() {
   const [registerErrorReponse, setRegisterErrorReponse] = useState();
   const [collection, setCollections] = useState([]);
+  const [defaultSizes, setDefaultSizes] = useState([]);
+  const [selectedDefaultSizes, setSelectedDefaultSizes] = useState([]);
+  const [defaultSizeAvailability, setDefaultSizeAvailability] = useState([]);
 
   useEffect(() => {
+    axios
+      .get("http://localhost:8080/size/")
+      .then((response) => {
+        setDefaultSizes(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching size data:", error);
+      });
     axios
       .get("http://localhost:8080/collections/")
       .then((response) => {
@@ -33,12 +44,21 @@ function UploadCarpetPage() {
 
   const registerHandleSubmit = async (data) => {
     const formData = new FormData();
-    formData.append("carpetName", data.carpetName);
-    formData.append("squaremetrePrice", parseInt(data.squaremetrePrice, 10));
     formData.append("imageFile", data.imageFile[0]);
-    formData.append("collection_id", parseInt(data.collectionId, 10));
-    console.log(data);
-    console.log(formData);
+
+    const carpetData = {
+      carpetName: data.carpetName,
+      squaremetrePrice: parseInt(data.squaremetrePrice, 10),
+      imagePath: data.imageFile[0].name, // Adjust according to your file path
+      collection_id: parseInt(data.collectionId, 10),
+      carpetSizes: [{ sizeId: 1, isAvailable: true }],
+    };
+
+    formData.append(
+      "carpetUploadRequest",
+      new Blob([JSON.stringify(carpetData)], { type: "application/json" })
+    );
+
     try {
       const response = await axios.post(
         "http://localhost:8080/carpets/upload",
@@ -75,6 +95,7 @@ function UploadCarpetPage() {
       {errors?.collectionId && (
         <p className="formError">{errors.collectionId.message}</p>
       )}
+      <br />
       <label htmlFor="carpetName">Carpet Name:</label>
       <input
         type="text"
@@ -106,6 +127,23 @@ function UploadCarpetPage() {
       {errors?.imageFile && (
         <p className="formError">{errors.imageFile.message}</p>
       )}
+      <br />
+      {/* <label>Default Sizes:</label>
+      {defaultSizes?.map((size) => (
+        <div key={size.id}>
+          <label>
+            <input type="checkbox" {...register(`size_${size.id}`)} />
+            {size.width} cm x {size.length} cm
+          </label>
+          <label>
+            Available:
+            <input
+              type="checkbox"
+              {...register(`sizeAvailability_${size.id}`)}
+            />
+          </label>
+        </div>
+      ))} */}
       <br />
 
       <button type="submit">Upload</button>

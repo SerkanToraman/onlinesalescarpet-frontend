@@ -12,14 +12,13 @@ import axios from "axios";
 //CSS
 
 function DownloadCarpetPage() {
-  const [data, setData] = useState("");
+  const [imageData, setImageData] = useState();
   const { id } = useParams();
   useEffect(() => {
     axios
       .get(`http://localhost:8080/carpets/download/${id}`)
       .then((response) => {
-        setData(response.data);
-        console.log(response.data);
+      
       })
       .catch((error) => {
         console.error(error);
@@ -28,8 +27,7 @@ function DownloadCarpetPage() {
 
   return (
     <div>
-      <h1>{data.carpetName}</h1>
-      <img src={`data:image/jpeg;base64,${data.imageBase64}`} alt="Carpet" />
+      <img src={"http://localhost:8080/carpets/download/42"} alt="Carpet" />
     </div>
   );
 }
