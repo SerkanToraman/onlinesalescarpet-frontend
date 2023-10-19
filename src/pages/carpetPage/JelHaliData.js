@@ -9,31 +9,25 @@ export const JelHaliData = [
   {
     name: "228ANT",
     img: jel228ANT,
-    price: 500,
   },
   {
     name: "228KH",
     img: jel228KH,
-    price: 500,
   },
   {
     name: "228LL",
     img: jel228LL,
-    price: 500,
   },
   {
     name: "602KH",
     img: jel602KH,
-    price: 500,
   },
   {
     name: "602LL",
     img: jel602LL,
-    price: 500,
   },
   {
     name: "602SY",
     img: jel602SY,
-    price: 500,
   },
 ];

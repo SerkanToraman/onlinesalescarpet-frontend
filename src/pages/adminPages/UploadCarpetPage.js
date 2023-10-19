@@ -14,8 +14,7 @@ function UploadCarpetPage() {
   const [registerErrorReponse, setRegisterErrorReponse] = useState();
   const [collection, setCollections] = useState([]);
   const [defaultSizes, setDefaultSizes] = useState([]);
-  const [selectedDefaultSizes, setSelectedDefaultSizes] = useState([]);
-  const [defaultSizeAvailability, setDefaultSizeAvailability] = useState([]);
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
   useEffect(() => {
     axios
@@ -42,6 +41,28 @@ function UploadCarpetPage() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
+  const handleSizeChange = (sizeId, e) => {
+    const checked = e.target.checked;
+    if (checked) {
+      setSelectedSizes((prev) => [...prev, { sizeId, available: false }]);
+    } else {
+      setSelectedSizes((prev) => prev.filter((size) => size.sizeId !== sizeId));
+    }
+  };
+
+  const handleSizeAvailabilityChange = (sizeId, e) => {
+    const checked = e.target.checked;
+    setSelectedSizes((prev) =>
+      prev.map((size) =>
+        size.sizeId === sizeId ? { ...size, available: true } : size
+      )
+    );
+  };
+
+  useEffect(() => {
+    console.log(selectedSizes);
+  }, [selectedSizes]);
+
   const registerHandleSubmit = async (data) => {
     const formData = new FormData();
     formData.append("imageFile", data.imageFile[0]);
@@ -51,8 +72,10 @@ function UploadCarpetPage() {
       squaremetrePrice: parseInt(data.squaremetrePrice, 10),
       imagePath: data.imageFile[0].name, // Adjust according to your file path
       collection_id: parseInt(data.collectionId, 10),
-      carpetSizes: [{ sizeId: 1, isAvailable: true }],
+      carpetSizes: selectedSizes,
     };
+
+    console.log(carpetData);
 
     formData.append(
       "carpetUploadRequest",
@@ -128,11 +151,15 @@ function UploadCarpetPage() {
         <p className="formError">{errors.imageFile.message}</p>
       )}
       <br />
-      {/* <label>Default Sizes:</label>
+      <label>Default Sizes:</label>
       {defaultSizes?.map((size) => (
         <div key={size.id}>
           <label>
-            <input type="checkbox" {...register(`size_${size.id}`)} />
+            <input
+              type="checkbox"
+              {...register(`size_${size.id}`)}
+              onChange={(e) => handleSizeChange(size.id, e)}
+            />
             {size.width} cm x {size.length} cm
           </label>
           <label>
@@ -140,10 +167,12 @@ function UploadCarpetPage() {
             <input
               type="checkbox"
               {...register(`sizeAvailability_${size.id}`)}
+              onChange={(e) => handleSizeAvailabilityChange(size.id, e)}
+              disabled={!selectedSizes.find((s) => s.sizeId === size.id)}
             />
           </label>
         </div>
-      ))} */}
+      ))}
       <br />
 
       <button type="submit">Upload</button>

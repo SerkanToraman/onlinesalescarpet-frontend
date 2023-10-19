@@ -26,7 +26,6 @@ function CarpetCard({ carpetItem, title }) {
         <img src={carpetItem.img} alt={carpetItem.img} />
       </div>
       <h3>{carpetItem.name}</h3>
-      <p>{carpetItem.price} tl</p>
       <button>Satın Al</button>
     </div>
   );
