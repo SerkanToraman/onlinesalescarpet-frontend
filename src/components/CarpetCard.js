@@ -1,7 +1,9 @@
 //Outsource JS library
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 //Internal JS
+import { getSingleCarpetActionCreater } from "../store/actions/carpetActions";
 //Components
 //Context
 //Store
@@ -10,22 +12,28 @@ import { useNavigate } from "react-router-dom";
 
 function CarpetCard({ carpetItem, title }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [url, setUrl] = useState("");
   useEffect(() => {
-    setUrl(title + "-" + carpetItem.name.toLowerCase());
+    setUrl(title + "-" + carpetItem.carpetName.toLowerCase());
   }, []);
+
+  const  handleSubmit = () => {
+    dispatch(getSingleCarpetActionCreater(carpetItem.id))
+  };
 
   return (
     <div
       className="carpetCard"
       onClick={() => {
         navigate("/urun/" + url);
+        handleSubmit();
       }}
     >
       <div className="carpetCardImg">
-        <img src={carpetItem.img} alt={carpetItem.img} />
+        <img src={`http://localhost:8080/carpets/downloadImage/${carpetItem.id}`} alt={carpetItem.imagePath} />
       </div>
-      <h3>{carpetItem.name}</h3>
+      <h3>{carpetItem.carpetName}</h3>
       <button>Satın Al</button>
     </div>
   );
