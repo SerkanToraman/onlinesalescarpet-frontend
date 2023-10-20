@@ -7,10 +7,10 @@ import { useForm } from "react-hook-form";
 //Pages
 //CSS
 
-function ProductForm({ filteredData }) {
+function ProductForm({ item }) {
   const [selectedRollSize, setSelectedRollSize] = useState("");
   const [finalRollSize, setFinalRollSize] = useState("");
-  const [finalRollLength, setFinalRollLength] = useState("");
+  const [finalRollLength, setFinalRollLength] = useState(0);
   const [quantity, setQuantity] = useState("");
   const [selectedCheckbox, setSelectedCheckbox] = useState(null);
 
@@ -91,11 +91,25 @@ function ProductForm({ filteredData }) {
         <option selected value=" ">
           Kullanılacak Rulo
         </option>
-        <option value="200">200cm</option>
-        <option value="150">150cm</option>
-        <option value="120">120cm</option>
-        <option value="100">100cm</option>
-        <option value="80">80cm</option>
+        {item?.map((value, index) =>
+          value.length === 0 ? (
+            <option
+              key={index}
+              disabled={value.available === false}
+              value={value.width}
+            >
+              {value.width} cm
+            </option>
+          ) : (
+            <option
+              key={index}
+              disabled={value.available === false}
+              value={`${value.width}x${value.length}`}
+            >
+              {value.width}x{value.length} cm
+            </option>
+          )
+        )}
       </select>
       <h3>En (cm)</h3>
       <div class="input-group mb-3" id="formElements">
@@ -105,7 +119,7 @@ function ProductForm({ filteredData }) {
           placeholder="En Ölçüsü"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
-          value={finalRollSize}
+          value={finalRollSize === 0 ? "" : finalRollSize}
           onChange={handleInputRollSize}
         />
         <button
@@ -132,10 +146,10 @@ function ProductForm({ filteredData }) {
         <input
           type="text"
           class="form-control"
-          placeholder="En Ölçüsü"
+          placeholder="Boy Ölçüsü"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
-          value={finalRollLength}
+          value={finalRollLength === 0 ? "" : finalRollLength}
           onChange={handleInputRollWidth}
         />
         <button
