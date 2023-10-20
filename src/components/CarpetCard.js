@@ -18,16 +18,12 @@ function CarpetCard({ carpetItem, title }) {
     setUrl(title + "-" + carpetItem.carpetName.toLowerCase());
   }, []);
 
-  const  handleSubmit = () => {
-    dispatch(getSingleCarpetActionCreater(carpetItem.id))
-  };
 
   return (
     <div
       className="carpetCard"
       onClick={() => {
         navigate("/urun/" + url);
-        handleSubmit();
       }}
     >
       <div className="carpetCardImg">

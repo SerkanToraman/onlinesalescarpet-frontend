@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function ProductStockStatusGrid() {
+function ProductStockStatusGrid({ item }) {
+  console.log(item);
+
   return (
-    <section className="productStockStatusGridContainer">
-      <div class="container text-center border border-secondary-subtle">
-        <div class="row border-bottom border-secondary-subtle" id="row1">
-          <div class="col-12">Stok Durumu</div>
-        </div>
-        <div class="row border-bottom border-secondary-subtle" id="row2">
-          <div class="col border-end border-secondary-subtle">200cm</div>
-          <div class="col border-end border-secondary-subtle">150cm</div>
-          <div class="col border-end border-secondary-subtle">120cm</div>
-          <div class="col border-end border-secondary-subtle">100cm</div>
-          <div class="col ">80cm</div>
-        </div>
-        <div class="row" id="row3">
-          <div class="col border-end border-secondary-subtle">var</div>
-          <div class="col border-end border-secondary-subtle ">var</div>
-          <div class="col border-end border-secondary-subtle">var</div>
-          <div class="col border-end border-secondary-subtle">var</div>
-          <div class="col ">var</div>
-        </div>
+    <table className="productStockStatusGridContainer">
+      <div className="" id="row1">
+        Stok Durumu
       </div>
-    </section>
+      <div className="" id="wrapper">
+        {item?.map((value, index) => (
+          <div key={index} className="singleCard">
+            <div className="singleCardTop">
+              {value.length === 0
+                ? value.width
+                : `${value.width}x${value.leght}`}{" "}
+              cm
+            </div>
+            <div className="singleCardBottom">
+              {value.available === true ? "var" : "yok"}
+            </div>
+          </div>
+        ))}
+      </div>
+    </table>
   );
 }
 
 export default ProductStockStatusGrid;
+

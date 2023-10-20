@@ -17,9 +17,9 @@ export const getCarpetsActionCreater =()=>(dispatch)=>{
   })
 }
 
-export const getSingleCarpetActionCreater =(carpetId)=>(dispatch)=>{
+export const getSingleCarpetActionCreater =(name)=>(dispatch)=>{
   axiosWithAuth()
-  .get("/carpets/download/"+carpetId)
+  .get("/carpets/download/"+name)
   .then((res)=>{
     dispatch({
       type: carpetActions.getSingleCarpet,

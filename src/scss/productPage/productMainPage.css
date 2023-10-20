@@ -242,6 +242,7 @@
 .productPageMainContainer .productCardContainer .productStockStatusGridContainer {
   width: 40rem;
   margin: auto;
+  border: 1px solid #9fa6b2;
 }
 .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row1 {
   display: flex;
@@ -249,22 +250,33 @@
   align-items: center;
   font-weight: bold;
   height: 3rem;
+  border-bottom: 1px solid #9fa6b2;
 }
-.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 {
-  height: 2rem;
-}
-.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 div {
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper {
   display: flex;
+  flex-wrap: wrap;
+  height: 4rem;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper .singleCard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper .singleCard .singleCardTop {
+  border-bottom: 1px solid #9fa6b2;
+  display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
 }
-.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 {
-  height: 2rem;
-}
-.productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 div {
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper .singleCard .singleCardBottom {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
+}
+.productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper .singleCard:not(:last-child) {
+  border-right: 1px solid #9fa6b2;
 }
 @media (max-width: 600px) {
   .productPageMainContainer .productCardContainer .productStockStatusGridContainer {
@@ -278,21 +290,8 @@
     font-weight: bold;
     height: 2rem;
   }
-  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 {
-    height: 1.5rem;
-  }
-  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row2 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 {
-    height: 1.5rem;
-  }
-  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #row3 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .productPageMainContainer .productCardContainer .productStockStatusGridContainer #wrapper {
+    height: 3rem;
   }
 }
 .productPageMainContainer .productCardContainer .bottomSection {
