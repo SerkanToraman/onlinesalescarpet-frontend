@@ -15,6 +15,8 @@ function UploadCarpetPage() {
   const [collection, setCollections] = useState([]);
   const [defaultSizes, setDefaultSizes] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
+  const [fringes, setFringes] = useState([]);
+  const [selectedFringes, setSelectedFringes] = useState([]);
 
   useEffect(() => {
     axios
@@ -29,6 +31,14 @@ function UploadCarpetPage() {
       .get("http://localhost:8080/collections/")
       .then((response) => {
         setCollections(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching collection IDs:", error);
+      });
+    axios
+      .get("http://localhost:8080/fringe/")
+      .then((response) => {
+        setFringes(response.data);
       })
       .catch((error) => {
         console.error("Error fetching collection IDs:", error);
@@ -59,6 +69,15 @@ function UploadCarpetPage() {
     );
   };
 
+  const handleFringeChange = (fringeId) => {
+    const parsedFringeId = parseInt(fringeId, 10);
+    if (selectedFringes.includes(parsedFringeId)) {
+      setSelectedFringes((prev) => prev.filter((id) => id !== parsedFringeId));
+    } else {
+      setSelectedFringes((prev) => [...prev, parsedFringeId]);
+    }
+  };
+
   useEffect(() => {
     console.log(selectedSizes);
   }, [selectedSizes]);
@@ -73,6 +92,7 @@ function UploadCarpetPage() {
       imagePath: data.imageFile[0].name, // Adjust according to your file path
       collection_id: parseInt(data.collectionId, 10),
       carpetSizes: selectedSizes,
+      carpetFringeList: selectedFringes,
     };
 
     console.log(carpetData);
@@ -174,6 +194,19 @@ function UploadCarpetPage() {
         </div>
       ))}
       <br />
+      <label>Fringes:</label>
+      {fringes?.map((fringe) => (
+        <div key={fringe.id}>
+          <label>
+            {fringe.fringeType}
+            <input
+              type="checkbox"
+              {...register(`fringe_${fringe.id}`)}
+              onChange={() => handleFringeChange(fringe.id)}
+            />
+          </label>
+        </div>
+      ))}
 
       <button type="submit">Upload</button>
     </form>
