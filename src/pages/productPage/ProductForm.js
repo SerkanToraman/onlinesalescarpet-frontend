@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 //Pages
 //CSS
 
-function ProductForm({ item }) {
+function ProductForm({ size, fringe }) {
   const [selectedRollSize, setSelectedRollSize] = useState("");
   const [finalRollSize, setFinalRollSize] = useState("");
   const [finalRollLength, setFinalRollLength] = useState(0);
@@ -91,7 +91,7 @@ function ProductForm({ item }) {
         <option selected value=" ">
           Kullanılacak Rulo
         </option>
-        {item?.map((value, index) =>
+        {size?.map((value, index) =>
           value.length === 0 ? (
             <option
               key={index}
@@ -191,16 +191,16 @@ function ProductForm({ item }) {
         <option value="10">10</option>
       </select>
       <div className="list-group" id="formElements">
-        {checkboxes.map((checkbox) => (
+        {fringe?.map((checkbox) => (
           <label className="list-group-item" key={checkbox.id}>
             <input
               className="form-check-input me-1"
               type="checkbox"
-              value={checkbox.label}
-              checked={selectedCheckbox === checkbox.label}
-              onChange={() => handleCheckboxChange(checkbox.label)}
+              value={checkbox.fringeType}
+              checked={selectedCheckbox === checkbox.fringeType}
+              onChange={() => handleCheckboxChange(checkbox.fringeType)}
             />
-            {checkbox.label}
+            {checkbox.fringeType}
           </label>
         ))}
       </div>

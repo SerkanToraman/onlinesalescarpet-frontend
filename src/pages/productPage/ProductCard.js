@@ -53,7 +53,7 @@ function ProductCard() {
             alt={singleCarpet?.imagePath}
           />
         </div>
-        <ProductForm item={singleCarpet?.carpetSizesList} />
+        <ProductForm size={singleCarpet?.carpetSizesList} fringe={singleCarpet?.carpetFringeList} />
       </section>
     </section>
   );
